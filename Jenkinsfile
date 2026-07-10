@@ -13,11 +13,9 @@ pipeline {
             }
         }
 
-       stage('Ejecutar tests') {
+      stage('Ejecutar tests') {
     steps {
         sh '''
-            chmod +x node_modules/.bin/jest
-            ls -l node_modules/.bin/jest
             which node
             node -v
             npm test
