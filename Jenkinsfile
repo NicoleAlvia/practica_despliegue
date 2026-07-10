@@ -12,15 +12,19 @@ pipeline {
             }
         }
 
-        stage('Ejecutar tests') {
+     stage('Ejecutar tests') {
     steps {
         sh '''
-            chmod +x node_modules/.bin/jest || true
-            npx jest
+            echo "=== Revisando permisos ==="
+            ls -l node_modules/.bin
+            ls -l node_modules/jest/bin
+            which node
+            node -v
+            npm -v
+            npx jest --version
         '''
     }
 }
-
         stage('Construir Imagen Docker') {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
