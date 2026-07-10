@@ -14,17 +14,16 @@ pipeline {
         }
 
         stage('Ejecutar tests') {
-            steps {
-                sh '''
-                    chmod +x node_modules/.bin/jest
-                    ls -l node_modules/.bin/jest
-                    which node
-                    node -v
-                    npm test
-                '''
-            }
-        }
-
+    steps {
+        sh '''
+            chmod +x node_modules/.bin/jest
+            ls -l node_modules/.bin/jest
+            which node
+            node -v
+            npm test
+        '''
+    }
+}
         stage('Construir Imagen Docker') {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
