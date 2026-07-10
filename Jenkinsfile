@@ -6,23 +6,25 @@ pipeline {
     }
 
     stages {
+
         stage('Instalar dependencias') {
             steps {
                 sh 'npm install'
             }
         }
 
-     stage('Ejecutar tests') {
-    steps {
-        sh '''
-            chmod +x node_modules/.bin/jest
-            ls -l node_modules/.bin/jest
-            which node
-            node -v
-            node node_modules/jest/bin/jest.js --version
-        '''
-    }
-}
+        stage('Ejecutar tests') {
+            steps {
+                sh '''
+                    chmod +x node_modules/.bin/jest
+                    ls -l node_modules/.bin/jest
+                    which node
+                    node -v
+                    npm test
+                '''
+            }
+        }
+
         stage('Construir Imagen Docker') {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
