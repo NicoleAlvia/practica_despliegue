@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "Node22" // Asume que tienes configurada una instalación llamada "Node22" en Jenkins
+        nodejs "Node22"
     }
 
     stages {
