@@ -8,10 +8,13 @@ pipeline {
     stages {
 
         stage('Instalar dependencias') {
-            steps {
-                sh 'npm install'
-            }
-        }
+    steps {
+        sh '''
+            npm install
+            chmod +x node_modules/.bin/jest
+        '''
+    }
+}
 
       stage('Ejecutar tests') {
     steps {
