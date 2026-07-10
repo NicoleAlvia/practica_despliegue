@@ -4,7 +4,7 @@
   "description": "Mi aplicación Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest"
+    "test": "jest"
   },
   "dependencies": {
     "express": "^4.22.2"
