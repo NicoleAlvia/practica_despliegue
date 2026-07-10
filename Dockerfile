@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 # Copiar archivos al contenedor
 COPY package*.json ./
 COPY index.js .
+RUN npm install
 # Usar Yarn en lugar de npm para evitar el bug de bloqueo en Windows/WSL2
 RUN yarn install --frozen-lockfile || yarn install
 # Exponer el puerto de la aplicación
