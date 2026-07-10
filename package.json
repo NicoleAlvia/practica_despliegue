@@ -7,13 +7,28 @@
     "test": "npx jest"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.22.2"
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "supertest": "^7.1.3"
+    "supertest": "^7.2.2"
   },
   "jest": {
     "testEnvironment": "node"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoleAlvia/practica_despliegue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NicoleAlvia/practica_despliegue/issues"
+  },
+  "homepage": "https://github.com/NicoleAlvia/practica_despliegue#readme"
 }
