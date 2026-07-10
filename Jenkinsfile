@@ -13,10 +13,13 @@ pipeline {
         }
 
         stage('Ejecutar tests') {
-            steps {
-                sh 'npm test'
-            }
-        }
+    steps {
+        sh '''
+            chmod +x node_modules/.bin/jest || true
+            npx jest
+        '''
+    }
+}
 
         stage('Construir Imagen Docker') {
             when {
