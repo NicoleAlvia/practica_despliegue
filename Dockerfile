@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 COPY index.js .
 
-# Instalar dependencias
+# Instalar dependenciasP
 RUN npm install
 
 # Copiar el resto de los archivos
