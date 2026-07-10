@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Ejecutar tests') {
+       stage('Ejecutar tests') {
     steps {
         sh '''
             chmod +x node_modules/.bin/jest
@@ -24,6 +24,7 @@ pipeline {
         '''
     }
 }
+
         stage('Construir Imagen Docker') {
             when {
                 expression { currentBuild.result == null || currentBuild.result == 'SUCCESS' }
