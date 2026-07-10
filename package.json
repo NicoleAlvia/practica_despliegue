@@ -16,18 +16,5 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
-    "directories": {
-        "test": "test"
-    },
-    "devDependencies": {},
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/NicoleAlvia/practica_despliegue.git"
-    },
-    "type": "commonjs",
-    "bugs": {
-        "url": "https://github.com/NicoleAlvia/practica_despliegue/issues"
-    },
-    "homepage": "https://github.com/NicoleAlvia/practica_despliegue#readme"
+    "license": "ISC"
 }
