@@ -15,13 +15,11 @@ pipeline {
      stage('Ejecutar tests') {
     steps {
         sh '''
-            echo "=== Revisando permisos ==="
-            ls -l node_modules/.bin
-            ls -l node_modules/jest/bin
+            chmod +x node_modules/.bin/jest
+            ls -l node_modules/.bin/jest
             which node
             node -v
-            npm -v
-            npx jest --version
+            node node_modules/jest/bin/jest.js --version
         '''
     }
 }
